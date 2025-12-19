@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Yoga Wiastina</title>
+</head>
+
+<body>
+    <header class="bg-white fixed w-full top-0 z-50 shadow">
+        <nav class="relative mx-auto max-w-7xl flex items-center p-6">
+            <!-- Logo kiri -->
+            <a href="#" class="text-xl font-bold text-indigo-600"> Yoga. </a>
+
+            <!-- Menu tengah -->
+            <ul class="absolute left-1/2 -translate-x-1/2 hidden md:flex gap-10 font-semibold text-gray-700">
+                <li><a href="#home" class="hover:text-indigo-600">Home</a></li>
+                <li><a href="#about" class="hover:text-indigo-600">About</a></li>
+                <li><a href="#skills" class="hover:text-indigo-600">Skills</a></li>
+                <li>
+                    <a href="#projects" class="hover:text-indigo-600">Projects</a>
+                </li>
+                <li><a href="#gallery" class="hover:text-indigo-600">Gallery</a></li>
+                <li><a href="#contact" class="hover:text-indigo-600">Contact</a></li>
+            </ul>
+
+            <!-- Mobile button kanan -->
+            <button id="menuBtn" class="ml-auto md:hidden text-gray-700 text-2xl">
+          ☰
+        </button>
+        </nav>
+
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="hidden md:hidden text-center bg-white px-6 pb-6">
+            <a href="#" class="block py-2">Home</a>
+            <a href="#" class="block py-2">About</a>
+            <a href="#" class="block py-2">Skills</a>
+            <a href="#" class="block py-2">Projects</a>
+            <a href="#" class="block py-2">Contact</a>
+        </div>
+    </header>
+</body>
+
+<!-- JavaScript for mobile menu toggle -->
+<script>
+    const btn = document.getElementById("menuBtn");
+    const menu = document.getElementById("mobileMenu");
+
+    btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+    });
+</script>
+
+</html>
