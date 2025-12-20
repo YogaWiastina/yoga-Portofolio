@@ -1,57 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
 
     <title>Yoga Wiastina</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="bg-white fixed w-full top-0 z-50 shadow">
-        <nav class="relative mx-auto max-w-7xl flex items-center p-6">
-            <!-- Logo kiri -->
-            <a href="#" class="text-xl font-bold text-indigo-600"> Yoga. </a>
+      <nav class="relative mx-auto max-w-7xl flex items-center p-6">
+        <!-- Logo kiri -->
+        <a href="#" class="text-xl font-bold text-indigo-600"> Yoga. </a>
 
-            <!-- Menu tengah -->
-            <ul class="absolute left-1/2 -translate-x-1/2 hidden md:flex gap-10 font-semibold text-gray-700">
-                <li><a href="#home" class="hover:text-indigo-600">Home</a></li>
-                <li><a href="#about" class="hover:text-indigo-600">About</a></li>
-                <li><a href="#skills" class="hover:text-indigo-600">Skills</a></li>
-                <li>
-                    <a href="#projects" class="hover:text-indigo-600">Projects</a>
-                </li>
-                <li><a href="#gallery" class="hover:text-indigo-600">Gallery</a></li>
-                <li><a href="#contact" class="hover:text-indigo-600">Contact</a></li>
-            </ul>
+        <!-- Menu tengah -->
+        <ul
+          class="absolute left-1/2 -translate-x-1/2 hidden md:flex gap-10 font-semibold text-gray-700"
+        >
+          <li><a href="#home" class="hover:text-indigo-600">Home</a></li>
+          <li><a href="#about" class="hover:text-indigo-600">About</a></li>
+          <li><a href="#skills" class="hover:text-indigo-600">Skills</a></li>
+          <li>
+            <a href="#projects" class="hover:text-indigo-600">Projects</a>
+          </li>
+          <li><a href="#gallery" class="hover:text-indigo-600">Gallery</a></li>
+          <li><a href="#contact" class="hover:text-indigo-600">Contact</a></li>
+        </ul>
 
-            <!-- Mobile button kanan -->
-            <button id="menuBtn" class="ml-auto md:hidden text-gray-700 text-2xl">
+        <!-- Mobile button kanan -->
+        <button id="menuBtn" class="ml-auto md:hidden text-gray-700 text-2xl">
           ☰
         </button>
-        </nav>
+      </nav>
 
-        <!-- Mobile menu -->
-        <div id="mobileMenu" class="hidden md:hidden text-center bg-white px-6 pb-6">
-            <a href="#" class="block py-2">Home</a>
-            <a href="#" class="block py-2">About</a>
-            <a href="#" class="block py-2">Skills</a>
-            <a href="#" class="block py-2">Projects</a>
-            <a href="#" class="block py-2">Contact</a>
-        </div>
+      <!-- Mobile menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden text-center bg-white px-6 pb-6"
+      >
+        <a href="#" class="block py-2">Home</a>
+        <a href="#" class="block py-2">About</a>
+        <a href="#" class="block py-2">Skills</a>
+        <a href="#" class="block py-2">Projects</a>
+        <a href="#" class="block py-2">Contact</a>
+      </div>
     </header>
-</body>
+    <section
+      id="home"
+      class="min-h-screen bg-cover bg-center relative"
+      style="background-image: url('assets/img/latar.png')"
+    >
+      <div
+        class="relative z-10 min-h-screen max-w-7xl mx-auto px-6 flex items-center"
+      >
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 w-full">
+          <div class="text-black">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4">
+              Hi, I’m <span class="text-indigo-400">Yoga</span>
+            </h1>
 
-<!-- JavaScript for mobile menu toggle -->
-<script>
+            <p class="text-lg md:text-xl text-black-200 mb-8">
+              Network Access Engineer & Web Developer
+            </p>
+
+            <div class="flex gap-4">
+              <a
+                href="#projects"
+                class="px-6 py-3 bg-indigo-600 rounded-lg font-semibold hover:bg-indigo-700"
+              >
+                View Projects
+              </a>
+              <a
+                href="#contact"
+                class="px-6 py-3 border border-black rounded-lg font-semibold hover:bg-white hover:text-black"
+              >
+                Contact Me
+              </a>
+            </div>
+          </div>
+
+          <div class="hidden md:block"></div>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <!-- JavaScript for mobile menu toggle -->
+  <script>
     const btn = document.getElementById("menuBtn");
     const menu = document.getElementById("mobileMenu");
 
     btn.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
+      menu.classList.toggle("hidden");
     });
-</script>
-
+  </script>
 </html>
