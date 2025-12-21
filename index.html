@@ -3,7 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- TAILWIND CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
     <title>Yoga Wiastina</title>
   </head>
@@ -46,41 +59,58 @@
         <a href="#" class="block py-2">Contact</a>
       </div>
     </header>
-    <section
-      id="home"
-      class="min-h-screen bg-cover bg-center relative"
-      style="background-image: url('assets/img/latar.png')"
-    >
-      <div
-        class="relative z-10 min-h-screen max-w-7xl mx-auto px-6 flex items-center"
-      >
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 w-full">
-          <div class="text-black">
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-4">
-              Hi, I’m <span class="text-indigo-400">Yoga</span>
-            </h1>
-
-            <p class="text-lg md:text-xl text-black-200 mb-8">
-              Network Access Engineer & Web Developer
-            </p>
-
-            <div class="flex gap-4">
-              <a
-                href="#projects"
-                class="px-6 py-3 bg-indigo-600 rounded-lg font-semibold hover:bg-indigo-700"
-              >
-                View Projects
-              </a>
-              <a
-                href="#contact"
-                class="px-6 py-3 border border-black rounded-lg font-semibold hover:bg-white hover:text-black"
-              >
-                Contact Me
-              </a>
-            </div>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Hi, I'am <span class="highlight">Yoga</span>,</h1>
+          <h2>Network Engineer & Web Developer.</h2>
+          <!-- <p>
+            Experienced in network infrastructure, system administration, and
+            full-stack web development.
+          </p> -->
+          <div class="hero-buttons">
+            <a href="#project" class="btn btn-outline">View Projects</a>
           </div>
-
-          <div class="hidden md:block"></div>
+          <div class="hero-socials">
+            <a
+              href="https://github.com/username"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a
+              href="https://github.com/username"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a
+              href="https://github.com/username"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a
+              href="https://linkedin.com/in/username"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a
+              href="https://github.com/username"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="mailto:email@example.com" aria-label="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
         </div>
       </div>
     </section>

@@ -1,0 +1,255 @@
+/* =========================
+   Google Fonts
+========================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
+
+/* =========================
+   Global Style
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  /* dark background */
+}
+
+/* =========================
+   Typography
+========================= */
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+}
+
+p {
+  line-height: 1.7;
+}
+
+/* =========================
+   Navbar
+========================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 16px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+/* blur ketika scroll */
+
+.navbar.scrolled {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* =========================
+   Hero Section
+========================= */
+
+/* =========================
+   Hero Section (Responsive)
+========================= */
+
+.hero {
+  min-height: 100vh;
+  background-image: url("assets/img/latar.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 230px;
+}
+
+/* Tablet */
+
+/* =========================
+   Tablet Layout (Center)
+========================= */
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+  }
+  .hero-text {
+    align-items: center;
+  }
+  .hero-buttons {
+    justify-content: center;
+  }
+  .hero-socials {
+    justify-content: center;
+  }
+  .hero-image {
+    display: none;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 0 24px;
+    background-position: center;
+  }
+}
+
+.hero-content {
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+/* Text kiri */
+
+.hero-text h1 {
+  font-size: 5rem;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 800;
+  margin: 0;
+  /* RESET TOTAL */
+  line-height: 1;
+  /* INI KUNCI UTAMA */
+}
+
+.highlight {
+  color: #f97316;
+  /* orange */
+}
+
+.hero-text h2 {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  margin: 5px 0 0 0;
+  /* jarak super dekat */
+  line-height: 1.2;
+  font-style: italic;
+}
+
+.hero-text p {
+  font-size: 0.7rem;
+  color: #cbd5f5;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 0 24px;
+  }
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+}
+
+/* =========================
+   Hero Buttons
+========================= */
+
+.hero-buttons {
+  margin-top: 16px;
+  display: flex;
+  gap: 16px;
+}
+
+/* base button */
+
+.btn {
+  padding: 14px 32px;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0;
+  /* ⬅️ INI KUNCINYA */
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+}
+
+/* white outline */
+
+.btn-outline {
+  background: transparent;
+  color: #090909;
+  border: 2px solid #000000;
+}
+
+/* hover effect (keduanya jadi orange) */
+
+.btn:hover {
+  background-color: #f97316;
+  color: #000000;
+  border-color: #f97316;
+  transform: translateY(-2px);
+  border: 2px solid #000000;
+}
+
+/* =========================
+   Responsive Button
+========================= */
+
+@media (max-width: 768px) {
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn {
+    width: 100%;
+    max-width: 260px;
+  }
+}
+
+/* =========================
+   Social Icons
+========================= */
+
+.hero-socials {
+  margin-top: 8px;
+  display: flex;
+  gap: 20px;
+}
+
+.hero-socials a {
+  color: #000000;
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+}
+
+.hero-socials a:hover {
+  color: #f97316;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .hero-socials {
+    justify-content: center;
+  }
+}
