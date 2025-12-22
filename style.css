@@ -2,7 +2,7 @@
    Google Fonts
 ========================= */
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&family=League+Spartan:wght@600;700;800&family=Poppins:wght@300;400;500&display=swap");
 
 /* =========================
    Global Style
@@ -16,7 +16,6 @@
 
 body {
   font-family: "Inter", sans-serif;
-  /* dark background */
 }
 
 /* =========================
@@ -50,8 +49,6 @@ p {
   z-index: 1000;
 }
 
-/* blur ketika scroll */
-
 .navbar.scrolled {
   background: rgba(15, 23, 42, 0.6);
   backdrop-filter: blur(10px);
@@ -59,90 +56,46 @@ p {
 }
 
 /* =========================
-   Hero Section
-========================= */
-
-/* =========================
-   Hero Section (Responsive)
+   Hero Section (Desktop Default)
 ========================= */
 
 .hero {
   min-height: 100vh;
   background-image: url("assets/img/latar.png");
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
   display: flex;
-  align-items: center;
-  padding: 0 230px;
-}
-
-/* Tablet */
-
-/* =========================
-   Tablet Layout (Center)
-========================= */
-
-@media (max-width: 1024px) and (min-width: 769px) {
-  .hero-content {
-    grid-template-columns: 1fr;
-    text-align: center;
-    justify-items: center;
-  }
-  .hero-text {
-    align-items: center;
-  }
-  .hero-buttons {
-    justify-content: center;
-  }
-  .hero-socials {
-    justify-content: center;
-  }
-  .hero-image {
-    display: none;
-  }
-}
-
-/* Mobile */
-
-@media (max-width: 768px) {
-  .hero {
-    padding: 0 24px;
-    background-position: center;
-  }
+  align-items: flex-start;
+  padding: 250px 90px;
+  position: relative;
 }
 
 .hero-content {
   max-width: 1100px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: start;
   gap: 48px;
 }
 
-/* Text kiri */
+/* =========================
+   Hero Text
+========================= */
 
 .hero-text h1 {
+  animation: fadeUp 1s ease-out forwards;
   font-size: 5rem;
   font-family: "League Spartan", sans-serif;
   font-weight: 800;
-  margin: 0;
-  /* RESET TOTAL */
   line-height: 1;
-  /* INI KUNCI UTAMA */
-}
-
-.highlight {
-  color: #f97316;
-  /* orange */
 }
 
 .hero-text h2 {
+  animation: fadeUp 1s ease-out forwards;
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  margin: 5px 0 0 0;
-  /* jarak super dekat */
-  line-height: 1.2;
+  margin-top: 5px;
   font-style: italic;
 }
 
@@ -151,21 +104,14 @@ p {
   color: #cbd5f5;
 }
 
-/* =========================
-   Responsive
-========================= */
+.highlight,
+.highlight-bottom {
+  color: #f97316;
+}
 
-@media (max-width: 768px) {
-  .hero {
-    padding: 0 24px;
-  }
-  .hero-content {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  .hero-text h1 {
-    font-size: 2.2rem;
-  }
+.highlight-bottom {
+  font-style: italic;
+  font-weight: bold;
 }
 
 /* =========================
@@ -178,23 +124,18 @@ p {
   gap: 16px;
 }
 
-/* base button */
-
 .btn {
   padding: 14px 32px;
   font-family: "League Spartan", sans-serif;
   font-weight: 600;
   text-decoration: none;
-  border-radius: 0;
-  /* ⬅️ INI KUNCINYA */
   transition: all 0.3s ease;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-width: 160px;
+  border-radius: 0;
 }
-
-/* white outline */
 
 .btn-outline {
   background: transparent;
@@ -202,29 +143,11 @@ p {
   border: 2px solid #000000;
 }
 
-/* hover effect (keduanya jadi orange) */
-
 .btn:hover {
   background-color: #f97316;
   color: #000000;
   border-color: #f97316;
   transform: translateY(-2px);
-  border: 2px solid #000000;
-}
-
-/* =========================
-   Responsive Button
-========================= */
-
-@media (max-width: 768px) {
-  .hero-buttons {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .btn {
-    width: 100%;
-    max-width: 260px;
-  }
 }
 
 /* =========================
@@ -232,6 +155,9 @@ p {
 ========================= */
 
 .hero-socials {
+  opacity: 0;
+  animation: fadeRight 1s ease-out forwards;
+  animation-delay: 0.5s;
   margin-top: 8px;
   display: flex;
   gap: 20px;
@@ -248,8 +174,143 @@ p {
   transform: translateY(-3px);
 }
 
-@media (max-width: 768px) {
-  .hero-socials {
+/* =========================
+   Hero Bottom Content
+========================= */
+
+.hero-bottom-text {
+  opacity: 0;
+  animation: fadeUp 1s ease-out forwards;
+  position: absolute;
+  left: 90px;
+  bottom: 100px;
+  max-width: 32ch;
+}
+
+.hero-bottom-text p {
+  text-align: justify;
+  animation: fadeUp 1s ease-out forwards;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #000000;
+  margin-bottom: 16px;
+}
+
+.hero-bottom-buttons {
+  animation: fadeUp 1s ease-out forwards;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* =========================
+   Laptop / Small Desktop Fix
+========================= */
+
+@media (max-width: 1200px) {
+  .hero {
+    padding: 200px 60px;
+  }
+  .hero-text h1 {
+    font-size: 4rem;
+  }
+  .hero-content {
+    gap: 32px;
+  }
+  .hero-bottom-text {
+    position: static;
+    margin-top: 32px;
+    max-width: 100%;
+  }
+}
+
+/* =========================
+   Tablet (769px – 1024px)
+========================= */
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .hero {
+    background-image: none;
+    background-color: #f2f2f2;
+  }
+  .hero-content {
     justify-content: center;
+    grid-template-columns: 1fr;
+  }
+  .hero-text h1,
+  .hero-content h2 {
+    text-align: center;
+  }
+  .hero-socials,
+  .hero-bottom-buttons {
+    justify-content: center;
+  }
+}
+
+.hero-bottom-text {
+  position: static;
+  margin-top: 40px;
+  max-width: 100%;
+  text-align: center;
+  .hero-bottom-text {
+    position: static;
+    margin-top: 32px;
+    text-align: center;
+    max-width: 100%;
+  }
+}
+
+/* =========================
+   Mobile (≤768px)
+========================= */
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 24px;
+    background-image: none;
+    background-color: #f2f2f2;
+  }
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+  .hero-buttons,
+  .hero-socials,
+  .hero-bottom-buttons {
+    justify-content: center;
+  }
+  .hero-bottom-text {
+    position: static;
+    margin-top: 32px;
+    text-align: center;
+    max-width: 100%;
+  }
+}
+
+/* =========================
+   Animations
+========================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
