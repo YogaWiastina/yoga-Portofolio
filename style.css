@@ -324,90 +324,144 @@ p {
   }
 }
 
+/* PHOTO */
+
 /* =========================
-   About Section
+   ABOUT SECTION
 ========================= */
 
-.section-about {
-  position: relative;
+.about-section {
   background: #f2f2f2;
   padding: 140px 90px;
+  color: #000;
 }
-
-/* shadow transisi dari hero */
 
 .about-container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 80px;
-  align-items: start;
 }
 
-/* Left title */
-
-.about-left h2 {
+.about-title {
+  font-family: "League Spartan", sans-serif;
   font-size: 3.2rem;
-  font-family: "League Spartan", sans-serif;
   font-weight: 800;
-  line-height: 1;
+  margin-bottom: 64px;
 }
 
-/* Right content */
+/* =========================
+   GRID FIX SESUAI GAMBAR
+========================= */
 
-.about-desc {
-  font-size: 1.05rem;
-  color: #333;
-  margin-bottom: 20px;
+.about-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 32px;
 }
 
-/* Stats */
+/* =========================
+   CARD BASE
+========================= */
 
-.about-stats {
-  margin: 32px 0;
-  display: flex;
-  gap: 40px;
+.about-card {
+  background: rgba(255, 111, 0, 0.06);
+  backdrop-filter: blur(14px);
+  border-radius: 22px;
+  padding: 32px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: all 0.35s ease;
+  position: relative;
 }
 
-.stat h3 {
-  font-size: 2rem;
+.about-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+  border-color: rgba(249, 115, 22, 0.45);
+}
+
+/* =========================
+   FOTO (KIRI TINGGI)
+========================= */
+
+.about-photo {
+  grid-row: span 2;
+  padding: 0;
+  overflow: hidden;
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 22px;
+  transition: transform 0.6s ease;
+}
+
+.about-photo:hover img {
+  transform: scale(1.06);
+}
+
+/* =========================
+   STORY (KANAN ATAS PANJANG)
+========================= */
+
+.about-story {
+  grid-column: span 2;
+}
+
+.about-story h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.7rem;
+  margin-bottom: 16px;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.about-card h4 {
   font-family: "League Spartan", sans-serif;
-  font-weight: 800;
-  color: #f97316;
+  font-size: 1.3rem;
+  margin-bottom: 12px;
 }
 
-.stat span {
-  font-size: 0.9rem;
-  color: #555;
+.about-card p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #d1d5db;
 }
+
+/* =========================
+   RESPONSIVE (AMAN)
+========================= */
 
 @media (max-width: 1024px) {
-  .section-about {
+  .about-section {
     padding: 100px 48px;
   }
-  .about-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
   }
-  .about-left h2 {
-    text-align: center;
+  .about-photo {
+    grid-row: span 1;
   }
-  .about-stats {
-    justify-content: center;
+  .about-story {
+    grid-column: span 2;
   }
 }
 
 @media (max-width: 768px) {
-  .section-about {
+  .about-section {
     padding: 80px 24px;
   }
-  .about-desc {
+  .about-title {
     text-align: center;
   }
-  .about-stats {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-photo,
+  .about-story {
+    grid-column: span 1;
   }
 }
