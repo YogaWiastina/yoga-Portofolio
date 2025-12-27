@@ -1,92 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <!-- TAILWIND CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
     <title>Yoga Wiastina</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="bg-white fixed w-full top-0 z-50 shadow">
-        <nav class="relative mx-auto max-w-7xl flex items-center p-6">
-            <!-- Logo kiri -->
-            <a href="#" class="text-xl font-bold text-indigo-600"> Yoga. </a>
+      <nav class="relative mx-auto max-w-7xl flex items-center p-6">
+        <!-- Logo kiri -->
+        <a href="#" class="text-xl font-bold text-indigo-600"> Yoga. </a>
 
-            <!-- Menu tengah -->
-            <ul class="absolute left-1/2 -translate-x-1/2 hidden md:flex gap-10 font-semibold text-gray-700">
-                <li><a href="#hero" class="hover:text-orange-600">Home</a></li>
-                <li>
-                    <a href="#section-about" class="hover:text-orange-600">About</a>
-                </li>
-                <li><a href="#skills" class="hover:text-orange-600">Skills</a></li>
-                <li>
-                    <a href="#projects" class="hover:text-orange-600">Projects</a>
-                </li>
-                <li><a href="#gallery" class="hover:text-orange-600">Gallery</a></li>
-                <li><a href="#contact" class="hover:text-orange-600">Contact</a></li>
-            </ul>
+        <!-- Menu tengah -->
+        <ul
+          class="absolute left-1/2 -translate-x-1/2 hidden md:flex gap-10 font-semibold text-gray-700"
+        >
+          <li><a href="#hero" class="hover:text-orange-600">Home</a></li>
+          <li>
+            <a href="#section-about" class="hover:text-orange-600">About</a>
+          </li>
+          <li><a href="#skills" class="hover:text-orange-600">Skills</a></li>
+          <li>
+            <a href="#projects" class="hover:text-orange-600">Projects</a>
+          </li>
+          <li><a href="#gallery" class="hover:text-orange-600">Gallery</a></li>
+          <li><a href="#contact" class="hover:text-orange-600">Contact</a></li>
+        </ul>
 
-            <!-- Mobile button kanan -->
-            <button id="menuBtn" class="ml-auto md:hidden text-gray-700 text-2xl">
+        <!-- Mobile button kanan -->
+        <button id="menuBtn" class="ml-auto md:hidden text-gray-700 text-2xl">
           ☰
         </button>
-        </nav>
+      </nav>
 
-        <!-- Mobile menu -->
-        <div id="mobileMenu" class="hidden md:hidden text-center bg-white px-6 pb-6">
-            <a href="#" class="block py-2">Home</a>
-            <a href="#" class="block py-2">About</a>
-            <a href="#" class="block py-2">Skills</a>
-            <a href="#" class="block py-2">Projects</a>
-            <a href="#" class="block py-2">Contact</a>
-        </div>
+      <!-- Mobile menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden text-center bg-white px-6 pb-6"
+      >
+        <a href="#" class="block py-2">Home</a>
+        <a href="#" class="block py-2">About</a>
+        <a href="#" class="block py-2">Skills</a>
+        <a href="#" class="block py-2">Projects</a>
+        <a href="#" class="block py-2">Contact</a>
+      </div>
     </header>
     <section class="hero" id="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Hi, I'am <span class="highlight">Yoga</span>.</h1>
-                <h2>Network Engineer & Web Developer.</h2>
-                <!-- <p>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Hi, I'am <span class="highlight">Yoga</span>.</h1>
+          <h2>Network Engineer & Web Developer.</h2>
+          <!-- <p>
             Experienced in network infrastructure, system administration, and
             full-stack web development.
           </p> -->
-                <!-- <div class="hero-buttons">
+          <!-- <div class="hero-buttons">
             <a href="#project" class="btn btn-outline">View Projects</a>
           </div> -->
-                <div class="hero-socials">
-                    <a href="https://github.com/username" target="_blank" aria-label="GitHub">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                    <a href="https://github.com/username" target="_blank" aria-label="GitHub">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="https://github.com/username" target="_blank" aria-label="GitHub">
-                        <i class="fa-brands fa-facebook"></i>
-                    </a>
-                    <a href="https://linkedin.com/in/username" target="_blank" aria-label="LinkedIn">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/username" target="_blank" aria-label="GitHub">
-                        <i class="fa-brands fa-twitter"></i>
-                    </a>
-                    <a href="mailto:email@example.com" aria-label="Email">
-                        <i class="fa-solid fa-envelope"></i>
-                    </a>
-                </div>
+          <div class="hero-socials">
+            <a
+              href="https://github.com/username"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a
+              href="https://github.com/username"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a
+              href="https://github.com/username"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a
+              href="https://linkedin.com/in/username"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a
+              href="https://github.com/username"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="mailto:email@example.com" aria-label="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
 
-                <div class="hero-bottom-text">
-                    <p>
-                        <span class="highlight-bottom">Network Engineer & Web Developer</span
+          <div class="hero-bottom-text">
+            <p>
+              <span class="highlight-bottom"
+                >Network Engineer & Web Developer</span
               >
               with hands-on experience in building secure networks and practical
               web applications. I combine infrastructure and development to
@@ -104,49 +135,184 @@
       <div class="about-container">
         <h2 class="about-title">About <span class="highlight">Me</span></h2>
 
-                        <div class="about-grid">
-                            <!-- FOTO -->
-                            <div class="about-card about-photo">
-                                <img src="assets/img/foto.png" alt="Foto Saya" />
-                            </div>
+        <div class="about-grid">
+          <!-- FOTO -->
+          <div class="about-card about-photo">
+            <img src="assets/img/foto.png" alt="Foto Saya" />
+          </div>
 
-                            <!-- STORY -->
-                            <div class="about-card about-story">
-                                <h3>A Bit About <span class="highlight">Me</span></h3>
-                                <p>
-                                    Thanks for stopping by and taking a moment to read this. Nice to meet you — I’m Bango 👋 I’m really into technology, especially networking and web development. I enjoy figuring out how things work behind the scenes — from setting up networks to building
-                                    websites that actually make sense (and don’t break… most of the time).
-                                </p>
-                            </div>
+          <!-- STORY -->
+          <div class="about-card about-story">
+            <h3>A Bit About <span class="highlight">Me</span></h3>
+            <p>
+              Thanks for stopping by and taking a moment to read this. Nice to
+              meet you — I’m Bango 👋 I’m really into technology, especially
+              networking and web development. I enjoy figuring out how things
+              work behind the scenes — from setting up networks to building
+              websites that actually make sense (and don’t break… most of the
+              time).
+            </p>
+          </div>
 
-                            <!-- CARD BAWAH KIRI -->
-                            <div class="about-card">
-                                <h4>How I <span class="highlight">Learn & Grow</span></h4>
-                                <p>
-                                    I don’t rely only on formal education. Most of my skills come from hands-on practice, experiments, breaking things (sometimes), and rebuilding them better.
-                                </p>
-                            </div>
+          <!-- CARD BAWAH KIRI -->
+          <div class="about-card">
+            <h4>How I <span class="highlight">Learn & Grow</span></h4>
+            <p>
+              I don’t rely only on formal education. Most of my skills come from
+              hands-on practice, experiments, breaking things (sometimes), and
+              rebuilding them better.
+            </p>
+          </div>
 
-                            <!-- CARD BAWAH KANAN -->
-                            <div class="about-card">
-                                <h4>Problem-Solving <span class="highlight">Mindset</span></h4>
-                                <p>
-                                    When something breaks, I don’t panic — I trace it. I like understanding systems from the inside out, whether it’s a network or a web application.
-                                </p>
-                            </div>
-                        </div>
-                </div>
+          <!-- CARD BAWAH KANAN -->
+          <div class="about-card">
+            <h4>Problem-Solving <span class="highlight">Mindset</span></h4>
+            <p>
+              When something breaks, I don’t panic — I trace it. I like
+              understanding systems from the inside out, whether it’s a network
+              or a web application.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
-</body>
 
-<!-- JavaScript for mobile menu toggle -->
-<script>
+    <!-- Education Section -->
+    <section class="education-section">
+      <div class="education-container">
+        <span class="edu-badge">THE GREAT JOURNEY OF</span>
+        <h2 class="edu-title">My School <span>Days!</span></h2>
+        <p class="edu-subtitle">
+          Selamat datang di petualangan belajarku! Yuk, intip perjalanan seru
+          dari masa kecil sampai sekarang ✨
+        </p>
+
+        <div class="timeline">
+          <!-- ITEM 1 -->
+          <div class="timeline-item left">
+            <div class="timeline-year">2005 - 2011</div>
+
+            <div class="timeline-photo">
+              <img src="assets/img/sd.jpg" alt="Sekolah Dasar" />
+              <span class="photo-caption">Jakarta, Indonesia 🇮🇩</span>
+            </div>
+
+            <div class="timeline-card blue">
+              <span class="edu-level">SEKOLAH DASAR</span>
+              <h3>SD Negeri Nusantara 01</h3>
+              <p>
+                Masa awal eksplorasi dunia akademis dengan fokus pada
+                pengembangan karakter dan dasar-dasar sains.
+              </p>
+
+              <div class="edu-tags">
+                <span>🏆 Juara Matematika</span>
+                <span>🎖️ Ketua Pramuka</span>
+                <span>⭐ Lulusan Terbaik</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ITEM 2 -->
+          <div class="timeline-item right">
+            <div class="timeline-year">2011 - 2014</div>
+
+            <div class="timeline-photo">
+              <img src="assets/img/smp.jpg" alt="SMP" />
+              <span class="photo-caption">Jakarta, Indonesia 🇮🇩</span>
+            </div>
+
+            <div class="timeline-card yellow">
+              <span class="edu-level">SEKOLAH MENENGAH PERTAMA</span>
+              <h3>SMP Negeri 1 Indonesia</h3>
+              <p>
+                Mulai tertarik dengan logika, teknologi, dan kerja tim melalui
+                berbagai kegiatan.
+              </p>
+
+              <div class="edu-tags">
+                <span>💡 Klub Sains</span>
+                <span>🤝 OSIS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ITEM 3 -->
+          <div class="timeline-item left">
+            <div class="timeline-year">2014 - 2017</div>
+
+            <div class="timeline-photo">
+              <img src="assets/img/smk.jpg" alt="SMK" />
+              <span class="photo-caption">Indonesia 🇮🇩</span>
+            </div>
+
+            <div class="timeline-card blue">
+              <span class="edu-level">SEKOLAH MENENGAH KEJURUAN</span>
+              <h3>SMK Teknologi Nusantara</h3>
+              <p>
+                Mulai serius mendalami jaringan komputer, troubleshooting, dan
+                praktik langsung.
+              </p>
+
+              <div class="edu-tags">
+                <span>🌐 Networking</span>
+                <span>🛠️ Praktikum</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ITEM 4 -->
+          <div class="timeline-item right">
+            <div class="timeline-year">2017 - Sekarang</div>
+
+            <div class="timeline-photo">
+              <img src="assets/img/kuliah.jpg" alt="Kuliah" />
+              <span class="photo-caption">Indonesia 🇮🇩</span>
+            </div>
+
+            <div class="timeline-card yellow">
+              <span class="edu-level">PERGURUAN TINGGI</span>
+              <h3>Universitas Teknologi</h3>
+              <p>
+                Fokus pada pengembangan skill profesional di bidang IT, web, dan
+                jaringan.
+              </p>
+
+              <div class="edu-tags">
+                <span>💻 Web Dev</span>
+                <span>🔐 Network</span>
+                <span>📚 Continuous Learning</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <!-- JavaScript for mobile menu toggle -->
+  <script>
     const btn = document.getElementById("menuBtn");
     const menu = document.getElementById("mobileMenu");
 
     btn.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
+      menu.classList.toggle("hidden");
     });
-</script>
+    const items = document.querySelectorAll(".timeline-item");
 
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    items.forEach((item) => observer.observe(item));
+  </script>
 </html>

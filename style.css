@@ -9,15 +9,14 @@
 ========================= */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif;
 }
-
 
 /* =========================
    Typography
@@ -26,460 +25,737 @@ body {
 h1,
 h2,
 h3 {
-    font-family: "Playfair Display", serif;
+  font-family: "Playfair Display", serif;
 }
 
 p {
-    line-height: 1.7;
+  line-height: 1.7;
 }
-
 
 /* =========================
    Navbar
 ========================= */
 
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 16px 48px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: transparent;
-    transition: all 0.3s ease;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 16px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  transition: all 0.3s ease;
+  z-index: 1000;
 }
 
 .navbar.scrolled {
-    background: rgba(15, 23, 42, 0.6);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-
 
 /* =========================
    Hero Section (Desktop Default)
 ========================= */
 
 .hero {
-    min-height: 100vh;
-    opacity: 0;
-    animation: fadeRight 1s ease-out forwards;
-    animation-delay: 0.2s;
-    background-image: url("assets/img/latar.png");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: flex-start;
-    padding: 240px 260px;
-    position: relative;
+  min-height: 100vh;
+  opacity: 0;
+  animation: fadeRight 1s ease-out forwards;
+  animation-delay: 0.2s;
+  background-image: url("assets/img/latar.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-start;
+  padding: 240px 260px;
+  position: relative;
 }
 
 .hero-content {
-    max-width: 1100px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: start;
-    gap: 18px;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 18px;
 }
-
 
 /* =========================
    Hero Text
 ========================= */
 
 .hero-text h1 {
-    animation: fadeUp 1s ease-out forwards;
-    font-size: 5rem;
-    font-family: "League Spartan", sans-serif;
-    font-weight: 800;
-    line-height: 1;
+  animation: fadeUp 1s ease-out forwards;
+  font-size: 5rem;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 800;
+  line-height: 1;
 }
 
 .hero-text h2 {
-    animation: fadeUp 1s ease-out forwards;
-    font-size: 1rem;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    margin-top: 5px;
-    font-style: italic;
+  animation: fadeUp 1s ease-out forwards;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  margin-top: 5px;
+  font-style: italic;
 }
 
 .hero-text p {
-    font-size: 0.7rem;
-    color: #cbd5f5;
+  font-size: 0.7rem;
+  color: #cbd5f5;
 }
 
 .highlight,
 .highlight-bottom {
-    color: #f97316;
+  color: #f97316;
 }
 
 .highlight-bottom {
-    font-style: italic;
-    font-weight: bold;
+  font-style: italic;
+  font-weight: bold;
 }
-
 
 /* =========================
    Hero Buttons
 ========================= */
 
 .hero-buttons {
-    margin-top: 16px;
-    display: flex;
-    gap: 16px;
+  margin-top: 16px;
+  display: flex;
+  gap: 16px;
 }
 
 .btn {
-    padding: 14px 32px;
-    font-family: "League Spartan", sans-serif;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 160px;
-    border-radius: 0;
+  padding: 14px 32px;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  border-radius: 0;
 }
 
 .btn-outline {
-    background: transparent;
-    color: #090909;
-    border: 2px solid #000000;
+  background: transparent;
+  color: #090909;
+  border: 2px solid #000000;
 }
 
 .btn:hover {
-    background-color: #f97316;
-    color: #000000;
-    border-color: #f97316;
-    transform: translateY(-2px);
-    border: 2px solid #000000;
+  background-color: #f97316;
+  color: #000000;
+  border-color: #f97316;
+  transform: translateY(-2px);
+  border: 2px solid #000000;
 }
-
 
 /* =========================
    Social Icons
 ========================= */
 
 .hero-socials {
-    opacity: 0;
-    animation: fadeRight 1s ease-out forwards;
-    animation-delay: 0.5s;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    display: flex;
-    gap: 20px;
+  opacity: 0;
+  animation: fadeRight 1s ease-out forwards;
+  animation-delay: 0.5s;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: flex;
+  gap: 20px;
 }
 
 .hero-socials a {
-    color: #000000;
-    font-size: 1.4rem;
-    transition: all 0.3s ease;
+  color: #000000;
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
 }
 
 .hero-socials a:hover {
-    color: #f97316;
-    transform: translateY(-3px);
+  color: #f97316;
+  transform: translateY(-3px);
 }
-
 
 /* =========================
    Hero Bottom Content
 ========================= */
 
 .hero-bottom-text {
-    opacity: 0;
-    animation: fadeUp 1s ease-out forwards;
-    position: absolute;
-    left: 260px;
-    max-width: 52ch;
+  opacity: 0;
+  animation: fadeUp 1s ease-out forwards;
+  position: absolute;
+  left: 260px;
+  max-width: 52ch;
 }
 
 .hero-bottom-text p {
-    font-family: "League Spartan", sans-serif;
-    font-weight: 500;
-    text-align: justify;
-    animation: fadeUp 1s ease-out forwards;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #000000;
-    margin-bottom: 6px;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 500;
+  text-align: justify;
+  animation: fadeUp 1s ease-out forwards;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #000000;
+  margin-bottom: 6px;
 }
 
 .hero-bottom-buttons {
-    animation: fadeUp 1s ease-out forwards;
-    display: flex;
-    justify-content: flex-start;
+  animation: fadeUp 1s ease-out forwards;
+  display: flex;
+  justify-content: flex-start;
 }
-
 
 /* =========================
    Laptop / Small Desktop Fix
 ========================= */
 
 @media (max-width: 1200px) {
-    .hero {
-        padding: 200px 60px;
-    }
-    .hero-text h1 {
-        font-size: 4rem;
-    }
-    .hero-content {
-        gap: 32px;
-    }
-    .hero-bottom-text {
-        position: static;
-        margin-top: 32px;
-        max-width: 100%;
-    }
+  .hero {
+    padding: 200px 60px;
+  }
+  .hero-text h1 {
+    font-size: 4rem;
+  }
+  .hero-content {
+    gap: 32px;
+  }
+  .hero-bottom-text {
+    position: static;
+    margin-top: 32px;
+    max-width: 100%;
+  }
 }
-
 
 /* =========================
    Tablet (769px – 1024px)
 ========================= */
 
 @media (max-width: 1024px) and (min-width: 769px) {
-    .hero {
-        background-image: none;
-        background-color: #f2f2f2;
-    }
-    .hero-content {
-        justify-content: center;
-        grid-template-columns: 1fr;
-    }
-    .hero-text h1,
-    .hero-content h2 {
-        text-align: center;
-    }
-    .hero-socials,
-    .hero-bottom-buttons {
-        justify-content: center;
-    }
+  .hero {
+    background-image: none;
+    background-color: #f2f2f2;
+  }
+  .hero-content {
+    justify-content: center;
+    grid-template-columns: 1fr;
+  }
+  .hero-text h1,
+  .hero-content h2 {
+    text-align: center;
+  }
+  .hero-socials,
+  .hero-bottom-buttons {
+    justify-content: center;
+  }
 }
 
 .hero::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 240px;
-    /* dari 160 → 240 */
-    background: linear-gradient( to bottom, rgba(242, 242, 242, 0), rgba(242, 242, 242, 1));
-    pointer-events: none;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 240px;
+  /* dari 160 → 240 */
+  background: linear-gradient(
+    to bottom,
+    rgba(242, 242, 242, 0),
+    rgba(242, 242, 242, 1)
+  );
+  pointer-events: none;
 }
-
 
 /* =========================
    Mobile (≤768px)
 ========================= */
 
 @media (max-width: 768px) {
-    .hero {
-        padding: 100px 24px;
-        background-image: none;
-        background-color: #f2f2f2;
-    }
-    .hero-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    .hero-text h1 {
-        font-size: 2.2rem;
-    }
-    .hero-buttons,
-    .hero-socials,
-    .hero-bottom-buttons {
-        justify-content: center;
-    }
-    .hero-bottom-text {
-        position: static;
-        margin-top: 32px;
-        text-align: center;
-        max-width: 100%;
-    }
+  .hero {
+    padding: 100px 24px;
+    background-image: none;
+    background-color: #f2f2f2;
+  }
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+  .hero-buttons,
+  .hero-socials,
+  .hero-bottom-buttons {
+    justify-content: center;
+  }
+  .hero-bottom-text {
+    position: static;
+    margin-top: 32px;
+    text-align: center;
+    max-width: 100%;
+  }
 }
-
 
 /* =========================
    Animations
 ========================= */
 
 @keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeRight {
-    from {
-        opacity: 0;
-        transform: translateX(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-
 /* PHOTO */
-
 
 /* =========================
    ABOUT SECTION
 ========================= */
 
 .about-section {
-    background: #f2f2f2;
-    padding: 140px 90px;
-    color: #000;
+  background: #f2f2f2;
+  padding: 140px 90px;
+  color: #000;
 }
 
 .about-container {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .about-title {
-    font-family: "League Spartan", sans-serif;
-    font-size: 3.2rem;
-    font-weight: 800;
-    margin-bottom: 64px;
+  font-family: "League Spartan", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin-bottom: 64px;
 }
-
 
 /* =========================
    GRID FIX SESUAI GAMBAR
 ========================= */
 
 .about-grid {
-    display: grid;
-    grid-template-columns: 380px 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 32px;
+  display: grid;
+  grid-template-columns: 380px 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 32px;
 }
-
 
 /* =========================
    CARD BASE
 ========================= */
 
 .about-card {
-    background: rgba(255, 111, 0, 0.06);
-    backdrop-filter: blur(14px);
-    border-radius: 22px;
-    padding: 32px;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    transition: all 0.35s ease;
-    position: relative;
+  background: rgba(255, 111, 0, 0.06);
+  backdrop-filter: blur(14px);
+  border-radius: 22px;
+  padding: 32px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: all 0.35s ease;
+  position: relative;
+  animation: fadeFromTop 1s ease forwards;
+  animation-delay: 0.1s;
 }
 
 .about-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
-    border-color: rgba(249, 115, 22, 0.45);
+  transform: translateY(-8px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+  border-color: rgba(249, 115, 22, 0.45);
 }
-
 
 /* =========================
    FOTO (KIRI TINGGI)
 ========================= */
 
 .about-photo {
-    grid-row: span 2;
-    position: relative;
-    padding: 0;
-    overflow: hidden;
+  grid-row: span 2;
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  animation: fadeFromBottom 1s ease forwards;
 }
 
 .about-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 22px;
-    filter: grayscale(100%);
-    transition: filter 0.5s ease, transform 0.5s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 22px;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease, transform 0.5s ease;
+  animation: fadeFromBottom 1s ease forwards;
 }
 
 .about-photo:hover img {
-    filter: grayscale(0%);
-    transform: scale(1.05);
+  filter: grayscale(0%);
+  transform: scale(1.05);
 }
-
 
 /* =========================
    STORY (KANAN ATAS PANJANG)
 ========================= */
 
 .about-story {
-    grid-column: span 2;
+  grid-column: span 2;
+  animation: fadeFromTop 1s ease forwards;
+  animation-delay: 0.1s;
 }
 
 .about-story h3 {
-    font-family: "League Spartan", sans-serif;
-    font-size: 1.7rem;
-    font-weight: 700;
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  animation: fadeFromTop 1s ease forwards;
+  animation-delay: 0.1s;
 }
-
 
 /* =========================
    TEXT
 ========================= */
 
 .about-card h4 {
-    font-family: "League Spartan", sans-serif;
-    font-size: 1.7rem;
-    font-weight: 700;
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  animation: fadeFromTop 1s ease forwards;
+  animation-delay: 0.1s;
 }
 
 .about-card p {
-    font-size: 0.95rem;
-    line-height: 1.3;
-    color: #000000;
+  font-size: 0.95rem;
+  line-height: 1.3;
+  color: #000000;
+  animation: fadeFromTop 1s ease forwards;
+  animation-delay: 0.1s;
 }
 
+/* =========================
+   ABOUT ANIMATIONS
+========================= */
+
+@keyframes fadeFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 /* =========================
    RESPONSIVE (AMAN)
 ========================= */
 
 @media (max-width: 1024px) {
-    .about-section {
-        padding: 100px 48px;
-    }
-    .about-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-    .about-photo {
-        grid-row: span 1;
-    }
-    .about-story {
-        grid-column: span 2;
-    }
+  .about-section {
+    padding: 100px 48px;
+  }
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .about-photo {
+    grid-row: span 1;
+  }
+  .about-story {
+    grid-column: span 2;
+  }
 }
 
 @media (max-width: 768px) {
-    .about-section {
-        padding: 80px 24px;
-    }
-    .about-title {
-        text-align: center;
-    }
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-    .about-photo,
-    .about-story {
-        grid-column: span 1;
-    }
+  .about-section {
+    padding: 80px 24px;
+  }
+  .about-title {
+    text-align: center;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-photo,
+  .about-story {
+    grid-column: span 1;
+  }
+}
+
+/* =========================
+   EDUCATION SECTION
+========================= */
+
+.education-section {
+  background: #f7f7f7;
+  padding: 140px 90px;
+}
+
+.education-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.edu-badge {
+  display: inline-block;
+  padding: 6px 18px;
+  border: 2px solid #000;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.edu-title {
+  font-family: "League Spartan", sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+}
+
+.edu-title span {
+  color: #3b82f6;
+}
+
+.edu-subtitle {
+  max-width: 520px;
+  margin: 16px auto 80px;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+/* =========================
+   TIMELINE BASE
+========================= */
+
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    #000 0 8px,
+    transparent 8px 16px
+  );
+  transform: translateX(-50%);
+}
+
+/* =========================
+   ITEM
+========================= */
+
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.timeline-item.left {
+  grid-template-areas: "photo card";
+}
+
+.timeline-item.right {
+  grid-template-areas: "card photo";
+}
+
+.timeline-year {
+  position: absolute;
+  left: 50%;
+  top: -32px;
+  transform: translateX(-50%);
+  background: #fff;
+  border: 2px solid #000;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+/* =========================
+   PHOTO CARD
+========================= */
+
+.timeline-photo {
+  grid-area: photo;
+  background: #fff;
+  padding: 14px;
+  border-radius: 18px;
+  border: 2px solid #000;
+  transform: rotate(-2deg);
+  border: 3px solid #000;
+  box-shadow: 8px 8px 0 #000, 12px 12px 0 rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.timeline-item.right .timeline-photo {
+  transform: rotate(2deg);
+}
+
+.timeline-photo img {
+  width: 100%;
+  border-radius: 14px;
+}
+
+.photo-caption {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.timeline-photo:hover {
+  transform: translate(-6px, -6px);
+  box-shadow: 14px 14px 0 #000, 18px 18px 0 rgba(0, 0, 0, 0.18);
+}
+
+/* =========================
+   CARD
+========================= */
+
+.timeline-card {
+  grid-area: card;
+  padding: 28px;
+  border-radius: 22px;
+  border: 2px solid #000;
+  text-align: left;
+  border: 3px solid #000;
+  box-shadow: 8px 8px 0 #000, 12px 12px 0 rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.timeline-card:hover {
+  transform: translate(-6px, -6px);
+  box-shadow: 14px 14px 0 #000, 18px 18px 0 rgba(0, 0, 0, 0.18);
+}
+
+.timeline-card.blue {
+  background: #60a5fa;
+}
+
+.timeline-card.yellow {
+  background: #facc15;
+}
+
+.edu-level {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+.timeline-card h3 {
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.timeline-card p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* =========================
+   TAGS
+========================= */
+
+.edu-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.edu-tags span {
+  background: #fff;
+  border: 1.5px solid #000;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .education-section {
+    padding: 100px 32px;
+  }
+  .timeline::before {
+    left: 16px;
+  }
+  .timeline-item {
+    grid-template-columns: 1fr;
+    padding-left: 40px;
+  }
+  .timeline-item.left,
+  .timeline-item.right {
+    grid-template-areas: "photo" "card";
+  }
+  .timeline-year {
+    left: 16px;
+    transform: translateX(0);
+  }
 }
