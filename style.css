@@ -579,7 +579,7 @@ p {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 40px;
 }
 
 .timeline::before {
@@ -607,6 +607,8 @@ p {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 40px;
+  transform: scale(0.82);
+  transform-origin: center;
 }
 
 .timeline-item.left {
@@ -637,7 +639,7 @@ p {
 .timeline-photo {
   grid-area: photo;
   background: #fff;
-  padding: 14px;
+  padding: 10px;
   border-radius: 18px;
   border: 2px solid #000;
   transform: rotate(-2deg);
@@ -673,7 +675,7 @@ p {
 
 .timeline-card {
   grid-area: card;
-  padding: 28px;
+  padding: 20px;
   border-radius: 22px;
   border: 2px solid #000;
   text-align: left;
